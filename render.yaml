@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: achados-baratos
+    runtime: node
+    plan: free
+    buildCommand: echo pronto
+    startCommand: npm start
+    healthCheckPath: /api/saude
+    envVars:
+      - key: SHOPEE_APP_ID
+        sync: false
+      - key: SHOPEE_APP_SECRET
+        sync: false
+      - key: ML_CLIENT_ID
+        sync: false
+      - key: ML_CLIENT_SECRET
+        sync: false
+      - key: APIFY_TOKEN
+        sync: false
+      - key: SHEIN_COUNTRY
+        value: br
